@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+  --blue: hsl(216, 95%, 58%);
+  --blue-shade: hsl(216, 100%, 61%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+ background-color: var(--light-gray);
+ font-size: 15px;
+ font-family: "Outfit", sans-serif;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ height: 100vh;
+}
+
+.container {
+  width:320px;
+  height: 497px;
+  padding: 16px;
+
+  border-radius: 20px;
+
+  background-color: var(--white);
+}
+
+.container__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 288px;
+  height: 288px;
+  margin-bottom: 24px;
+
+  border-radius: 20px;
+
+  background-color: var(--blue);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 10px;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.container p {
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+.container__card::before {
+  content: '';
+
+  position: absolute;
+  left: -126px;
+  top: -175px;
+
+  width: 328px;
+  height: 328px;
+  
+  background-color: var(--blue-shade);
+
+  border-radius: 50%;
+
+  opacity: 1;
+}
+
+.container__card::after {
+  content: '';
+  position: absolute;
+  left: 96px;
+  top: 195px;
+
+  width: 328px;
+  height: 328px;
+  
+  background-color: var(--blue-shade);
+
+  border-radius: 50%;
+
+  opacity: 0.6;
+}
+
+#canvas {
+  filter: brightness(110%);
+}
